@@ -1,5 +1,5 @@
 module Providers
-  class Ovirt::Refresher < InfraManager::Refresher
+  class Ovirt::Refresher < Infra::Refresher
     def collect_inventory_for_targets(ems, targets)
       targets.map { |target| [target, {}] }
     end

@@ -1,4 +1,4 @@
 module Providers
-  class Ovirt < InfraManager
+  module Ovirt
   end
 end
