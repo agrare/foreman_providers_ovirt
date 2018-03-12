@@ -1,6 +1,4 @@
-require 'foreman_providers/ovirt/engine'
+require 'foreman_providers_ovirt/engine'
 
-module ForemanProviders
-  module Ovirt
-  end
+module ForemanProvidersOvirt
 end
