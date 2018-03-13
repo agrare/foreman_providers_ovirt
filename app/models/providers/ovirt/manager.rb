@@ -1,6 +1,6 @@
 module Providers
   class Ovirt::Manager < ExtManagementSystem
-    include_concern :ApiIntegration
+    include ApiIntegration
 
   end
 end
