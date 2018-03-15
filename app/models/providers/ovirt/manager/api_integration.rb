@@ -16,8 +16,6 @@ module Providers::Ovirt::Manager::ApiIntegration
   end
 
   def connect(options = {})
-    require 'byebug'
-    byebug
     # Prepare the options to call the method that creates the actual connection:
     connect_options = {
       :id         => id,

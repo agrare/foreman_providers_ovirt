@@ -50,7 +50,8 @@ module Providers
       if ems.use_graph_refresh?
         hashes = inventory.inventory_collections
       else
-        hashes = Parse::ParserBuilder.new(ems).build.ems_inv_to_hashes(inventory)
+        hashes = Providers::Ovirt::Parser.ems_inv_to_hashes(inventory)
+        hashes = hashes.slice(:vms, :hosts)
       end
       _log.debug "#{log_header} Parsing inventory...Complete"
 
@@ -58,7 +59,7 @@ module Providers
     end
 
     def post_process_refresh_classes
-      [::VmOrTemplate, ::Host]
+      [Providers::Ovirt::Vm, Providers::Ovirt::Host]
     end
 
     def inventory_from_ovirt(ems)
