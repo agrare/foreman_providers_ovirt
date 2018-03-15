@@ -5,7 +5,6 @@ module ForemanProvidersOvirt
     config.autoload_paths += Dir["#{config.root}/app/controllers/concerns"]
     config.autoload_paths += Dir["#{config.root}/app/helpers/concerns"]
     config.autoload_paths += Dir["#{config.root}/app/models/concerns"]
-    config.autoload_paths += Dir["#{config.root}/app/models/providers"]
     config.autoload_paths += Dir["#{config.root}/app/overrides"]
 
     # Add any db migrations
